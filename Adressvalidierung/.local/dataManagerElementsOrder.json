@@ -1,0 +1,38 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "pruefen&Sequence_1",
+        "variable1&Sequence_2",
+        "ApiStatus&Sequence_2",
+        "variable2&Sequence_2",
+        "JArray&Sequence_2",
+        "Longitude&Sequence_2",
+        "Latitude&Sequence_2",
+        "InputAdresse&Sequence_2",
+        "ApiResponse&Sequence_2",
+        "FormattedAddress&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "receiverId",
+        "name1",
+        "addressHouse",
+        "addressStreet",
+        "postalCode",
+        "city"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
