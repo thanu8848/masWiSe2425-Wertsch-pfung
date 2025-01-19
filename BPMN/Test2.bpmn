@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1olqnkq" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.30.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.22.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1olqnkq" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.28.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.22.0">
   <bpmn:collaboration id="Collaboration_02hl4bw">
     <bpmn:participant id="Participant_WerbungDALT" name="Werbeartikelproduktion DALT" processRef="Process_0ka307i" />
     <bpmn:participant id="Participant_0a4sgrr" name="Kunde" />
@@ -55,6 +55,7 @@ Materialparameter (T-Shirts, Kugelschreiber, Thermosflaschen, Jutebtuel)</bpmn:t
         <bpmn:flowNodeRef>Activity_16bzj6h</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_153ep6i</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_142w5va</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_192cvy9</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_1n14q1h" name="Produktion">
         <bpmn:flowNodeRef>Activity_133nzzw</bpmn:flowNodeRef>
@@ -153,9 +154,9 @@ Materialparameter (T-Shirts, Kugelschreiber, Thermosflaschen, Jutebtuel)</bpmn:t
     <bpmn:sequenceFlow id="Flow_07v12lb" sourceRef="Gateway_1vnaxqj" targetRef="Activity_01cdqav" />
     <bpmn:sequenceFlow id="Flow_1x1gmyb" sourceRef="Activity_16bzj6h" targetRef="Gateway_1vnaxqj" />
     <bpmn:sequenceFlow id="Flow_0kuzhfu" sourceRef="Gateway_1vnaxqj" targetRef="Activity_1tfkoyb" />
-    <bpmn:sequenceFlow id="Flow_1rgzsfc" sourceRef="Activity_142w5va" targetRef="Gateway_1tq5xti" />
+    <bpmn:sequenceFlow id="Flow_1rgzsfc" sourceRef="Activity_142w5va" targetRef="Activity_192cvy9" />
     <bpmn:sequenceFlow id="Flow_0bl8q8m" name="Ja (gültig)" sourceRef="Gateway_1tq5xti" targetRef="Activity_16bzj6h">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${true}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${adressReviewed}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0qhctde" sourceRef="Activity_1uhtzh3" targetRef="Gateway_13fdbas" />
     <bpmn:sequenceFlow id="Flow_0jqn26o" name="Ja" sourceRef="Gateway_048ilpm" targetRef="Gateway_13fdbas">
@@ -194,7 +195,7 @@ Materialparameter (T-Shirts, Kugelschreiber, Thermosflaschen, Jutebtuel)</bpmn:t
       <bpmn:outgoing>Flow_0kuzhfu</bpmn:outgoing>
     </bpmn:parallelGateway>
     <bpmn:exclusiveGateway id="Gateway_1tq5xti" name="Adresse existiert?">
-      <bpmn:incoming>Flow_1rgzsfc</bpmn:incoming>
+      <bpmn:incoming>Flow_1sbwwkj</bpmn:incoming>
       <bpmn:outgoing>Flow_0bl8q8m</bpmn:outgoing>
       <bpmn:outgoing>Flow_0uv5028</bpmn:outgoing>
     </bpmn:exclusiveGateway>
@@ -207,8 +208,8 @@ ihre Ware wurde versendet.
 
 Liebe Grüße Ihr
 DALT-Team</camunda:inputParameter>
-          <camunda:inputParameter name="from">s0591871@htw-berlin.de</camunda:inputParameter>
-          <camunda:inputParameter name="to">s0591871@htw-berlin.de</camunda:inputParameter>
+          <camunda:inputParameter name="from" />
+          <camunda:inputParameter name="to" />
           <camunda:inputParameter name="subject">Ware wurde versendet</camunda:inputParameter>
         </camunda:inputOutput>
       </bpmn:extensionElements>
@@ -224,8 +225,8 @@ wie fanden Sie unser Produkt?
 
 Liebe Grüße Ihr
 DALT-Team</camunda:inputParameter>
-          <camunda:inputParameter name="from">s0591871@htw-berlin.de</camunda:inputParameter>
-          <camunda:inputParameter name="to">s0591871@htw-berlin.de</camunda:inputParameter>
+          <camunda:inputParameter name="from" />
+          <camunda:inputParameter name="to" />
           <camunda:inputParameter name="subject">Feedback</camunda:inputParameter>
         </camunda:inputOutput>
       </bpmn:extensionElements>
@@ -277,7 +278,6 @@ DALT-Team</camunda:inputParameter>
         <bpmn:messageEventDefinition id="MessageEventDefinition_0edmm5f" messageRef="Message_29ubjdn" />
       </bpmn:intermediateCatchEvent>
       <bpmn:sequenceFlow id="Flow_1u7hvi0" sourceRef="Gateway_0qdq0n8" targetRef="Event_00w48ql" />
-      <bpmn:sequenceFlow id="Flow_065xpua" sourceRef="Activity_1jmjm3f" targetRef="Event_0vc7r95" />
       <bpmn:exclusiveGateway id="Gateway_1laxaw3">
         <bpmn:incoming>Flow_1xie0e6</bpmn:incoming>
         <bpmn:incoming>Flow_06w3kgd</bpmn:incoming>
@@ -297,8 +297,8 @@ Vielen Dank für Ihr Vertrauen in unser Unternehmen.
 
 Mit freundlichen Grüßen
 Ihr DALT-Team</camunda:inputParameter>
-            <camunda:inputParameter name="from">s0591871@htw-berlin.de</camunda:inputParameter>
-            <camunda:inputParameter name="to">s0591871@htw-berlin.de</camunda:inputParameter>
+            <camunda:inputParameter name="from" />
+            <camunda:inputParameter name="to" />
             <camunda:inputParameter name="subject">Rechnung</camunda:inputParameter>
           </camunda:inputOutput>
         </bpmn:extensionElements>
@@ -317,14 +317,15 @@ Vielen Dank für Ihr Vertrauen in unser Unternehmen.
 
 Mit freundlichen Grüßen
 Ihr DALT-Team</camunda:inputParameter>
-            <camunda:inputParameter name="from">s0591871@htw-berlin.de</camunda:inputParameter>
-            <camunda:inputParameter name="to">s0591871@htw-berlin.de</camunda:inputParameter>
+            <camunda:inputParameter name="from" />
+            <camunda:inputParameter name="to" />
             <camunda:inputParameter name="subject">Zahlungserinnerung</camunda:inputParameter>
           </camunda:inputOutput>
         </bpmn:extensionElements>
         <bpmn:incoming>Flow_0l8yvye</bpmn:incoming>
         <bpmn:outgoing>Flow_065xpua</bpmn:outgoing>
       </bpmn:sendTask>
+      <bpmn:sequenceFlow id="Flow_065xpua" sourceRef="Activity_1jmjm3f" targetRef="Event_0vc7r95" />
       <bpmn:association id="Association_1poyrie" associationDirection="None" sourceRef="Activity_1tcggg5" targetRef="TextAnnotation_0wwsug7" />
       <bpmn:textAnnotation id="TextAnnotation_0wwsug7">
         <bpmn:text>Neukunden, Kunden mit Sonderanfertigungen werden Rechnungen erstellt</bpmn:text>
@@ -461,17 +462,17 @@ Ihr DALT-Team</camunda:inputParameter>
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_13hyb4n" sourceRef="Activity_153ep6i" targetRef="Gateway_13fdbas" />
     <bpmn:sequenceFlow id="Flow_0uv5028" name="Nein (ungültig)" sourceRef="Gateway_1tq5xti" targetRef="Activity_153ep6i">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${ false}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${!adressReviewed}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:task id="Activity_142w5va" name="Adresse validieren (RPA-BOT)">
-      <bpmn:extensionElements>
-        <camunda:inputOutput>
-          <camunda:outputParameter name="Output_0nmidnv" />
-        </camunda:inputOutput>
-      </bpmn:extensionElements>
+    <bpmn:serviceTask id="Activity_142w5va" name="Adresse validieren (RPA-BOT)" camunda:type="external" camunda:topic="Adressvalidierung.2.5.10">
       <bpmn:incoming>Flow_1agt5oe</bpmn:incoming>
       <bpmn:outgoing>Flow_1rgzsfc</bpmn:outgoing>
-    </bpmn:task>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_1sbwwkj" sourceRef="Activity_192cvy9" targetRef="Gateway_1tq5xti" />
+    <bpmn:userTask id="Activity_192cvy9" name="Adresse bestätigen" camunda:formRef="Adresse_Exist" camunda:formRefBinding="latest">
+      <bpmn:incoming>Flow_1rgzsfc</bpmn:incoming>
+      <bpmn:outgoing>Flow_1sbwwkj</bpmn:outgoing>
+    </bpmn:userTask>
     <bpmn:association id="Association_0ltwvcx" associationDirection="None" sourceRef="Activity_16bzj6h" targetRef="TextAnnotation_1rqhv7w" />
     <bpmn:association id="Association_1uoyyoz" associationDirection="None" sourceRef="Activity_153ep6i" targetRef="TextAnnotation_0m5w304" />
     <bpmn:association id="Association_1w7ckh5" associationDirection="None" sourceRef="Activity_142w5va" targetRef="TextAnnotation_1a0v5sh" />
@@ -577,9 +578,11 @@ Ihr DALT-Team</camunda:inputParameter>
       <bpmndi:BPMNShape id="Event_19lsi23_di" bpmnElement="Event_19lsi23">
         <dc:Bounds x="4102" y="942" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0l5oipa_di" bpmnElement="Activity_142w5va">
-        <dc:Bounds x="2140" y="920" width="100" height="80" />
-        <bpmndi:BPMNLabel />
+      <bpmndi:BPMNShape id="Activity_1kiccbi_di" bpmnElement="Activity_142w5va">
+        <dc:Bounds x="2080" y="920" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_08xlj8v_di" bpmnElement="Activity_192cvy9">
+        <dc:Bounds x="2250" y="920" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0h8i2c6_di" bpmnElement="Activity_1dyivba">
         <dc:Bounds x="3528" y="920" width="100" height="80" />
@@ -605,8 +608,8 @@ Ihr DALT-Team</camunda:inputParameter>
         <dc:Bounds x="2388" y="1100" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Association_1w7ckh5_di" bpmnElement="Association_1w7ckh5">
-        <di:waypoint x="2177" y="920" />
-        <di:waypoint x="2113" y="851" />
+        <di:waypoint x="2132" y="920" />
+        <di:waypoint x="2089" y="840" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_0p0wzzg_di" bpmnElement="Event_0fsht57">
         <dc:Bounds x="2350" y="362" width="36" height="36" />
@@ -711,8 +714,8 @@ Ihr DALT-Team</camunda:inputParameter>
         <di:waypoint x="2808" y="1100" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1rgzsfc_di" bpmnElement="Flow_1rgzsfc">
-        <di:waypoint x="2240" y="960" />
-        <di:waypoint x="2413" y="960" />
+        <di:waypoint x="2180" y="960" />
+        <di:waypoint x="2250" y="960" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0bl8q8m_di" bpmnElement="Flow_0bl8q8m">
         <di:waypoint x="2463" y="960" />
@@ -775,7 +778,7 @@ Ihr DALT-Team</camunda:inputParameter>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1agt5oe_di" bpmnElement="Flow_1agt5oe">
         <di:waypoint x="2015" y="960" />
-        <di:waypoint x="2140" y="960" />
+        <di:waypoint x="2080" y="960" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_13hyb4n_di" bpmnElement="Flow_13hyb4n">
         <di:waypoint x="2388" y="1140" />
@@ -796,6 +799,10 @@ Ihr DALT-Team</camunda:inputParameter>
       <bpmndi:BPMNEdge id="Association_1uoyyoz_di" bpmnElement="Association_1uoyyoz">
         <di:waypoint x="2433" y="1180" />
         <di:waypoint x="2336" y="1230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1sbwwkj_di" bpmnElement="Flow_1sbwwkj">
+        <di:waypoint x="2350" y="960" />
+        <di:waypoint x="2413" y="960" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Participant_12gzokd_di" bpmnElement="Participant_0a4sgrr" isHorizontal="true">
         <dc:Bounds x="160" y="1570" width="3926" height="60" />

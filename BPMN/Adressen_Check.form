@@ -8,11 +8,11 @@
         "columns": null
       },
       "id": "Field_1n1k6d6",
-      "key": "adress_id"
+      "key": "adressReviewed"
     },
     {
-      "label": "Submit",
       "action": "submit",
+      "label": "Submit",
       "type": "button",
       "layout": {
         "row": "Row_08eenud",
@@ -25,9 +25,9 @@
   "id": "Adresse_Exist",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.29.0"
+    "version": "5.28.0"
   },
   "executionPlatform": "Camunda Platform",
   "executionPlatformVersion": "7.22.0",
-  "schemaVersion": 17
+  "schemaVersion": 16
 }

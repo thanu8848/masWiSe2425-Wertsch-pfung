@@ -51,7 +51,6 @@
       "key": "city"
     },
     {
-      "label": "Land",
       "values": [
         {
           "label": "Deutschland",
@@ -66,17 +65,18 @@
           "value": "aut"
         }
       ],
+      "label": "Land",
       "type": "select",
       "layout": {
         "row": "Row_07qnt55",
         "columns": null
       },
       "id": "Field_0f1o3j9",
-      "key": "select_pd1l6"
+      "key": "receiverId"
     },
     {
-      "label": "Submit",
       "action": "submit",
+      "label": "Submit",
       "type": "button",
       "layout": {
         "row": "Row_0r1l1o9",
@@ -89,9 +89,9 @@
   "id": "Adress_Korrektur",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.30.0"
+    "version": "5.28.0"
   },
   "executionPlatform": "Camunda Platform",
   "executionPlatformVersion": "7.22.0",
-  "schemaVersion": 17
+  "schemaVersion": 16
 }

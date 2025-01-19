@@ -1,19 +1,22 @@
 {
 	"info": {
-		"_postman_id": "cc8f3cb1-e3cd-4154-b96f-a63e5355b4c3",
+		"_postman_id": "48ea938e-2f9f-48bd-b049-9558e6c79f88",
 		"name": "Produktion",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "40251517"
+		"_exporter_id": "40250997"
 	},
 	"item": [
 		{
-			"name": "Startprozess",
+			"name": "Startprozess 1.1",
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"messageName\": \"DesignWunscherhalten\",\n\n\"processVariables\": {\n\"decision\": {\n\"value\": true\n}\n}\n}",
+					"raw": "{\n\"messageName\": \"DesignWunscherhalten\",\n\n\"processVariables\": {\n\"decision\": {\n\"value\": true\n},\n\"receiverId\":{\n    \"value\": \"deu\"\n},\n\"name1\":{\n\"value\": \"Thanuja Puthuveetil\"\n},\n\"addressStreet\":{\n\"value\": \"Kurfürstendamm\"\n},\n\"addressHouse\":{\n\"value\": \"1\"\n},\n\"postalCode\":{\n\"value\": \"10719\"\n},\n\n\"city\":{\n\"value\": \"Berlin\"\n\n\n\n},\n\"speicherort\": {\n\"value\":\"/Users/thanu/Downloads\"\n}\n}\n}\n\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -36,13 +39,16 @@
 			"response": []
 		},
 		{
-			"name": "Startprozess-Nein",
+			"name": "Startprozess 1.1 false",
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"messageName\": \"DesignWunscherhalten\",\n\n\"processVariables\": {\n\"decision\": {\n\"value\": false\n}\n}\n}",
+					"raw": "{\n\"messageName\": \"DesignWunscherhalten\",\n\n\"processVariables\": {\n\"decision\": {\n\"value\": false\n},\n\"receiverId\":{\n    \"value\": \"deu\"\n},\n\"name1\":{\n\"value\": \"Thanuja Puthuveetil\"\n},\n\"addressStreet\":{\n\"value\": \"Kurfürstendamm\"\n},\n\"addressHouse\":{\n\"value\": \"1\"\n},\n\"postalCode\":{\n\"value\": \"10719\"\n},\n\n\"city\":{\n\"value\": \"Berlin\"\n\n\n\n},\n\"speicherort\": {\n\"value\":\"/Users/thanu/Downloads\"\n}\n}\n}\n\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -101,70 +107,6 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\"messageName\": \"ZahlungEingegangenMessage\",\n\n\"processVariables\": {\n\n}\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/engine-rest/message",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"engine-rest",
-						"message"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Startprozess 1.1",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\"messageName\": \"DesignWunscherhalten\",\n\n\"processVariables\": {\n\"decision\": {\n\"value\": true\n},\n\"receiverId\":{\n    \"value\": \"deu\"\n},\n\"name1\":{\n\"value\": \"Thanuja Puthuveetil\"\n},\n\"addressStreet\":{\n\"value\": \"Kurfürstendamm\"\n},\n\"addressHouse\":{\n\"value\": \"1\"\n},\n\"postalCode\":{\n\"value\": \"10719\"\n},\n\n\"city\":{\n\"value\": \"Berlin\"\n\n\n\n},\n\"speicherort\": {\n\"value\":\"/Users/thanu/Downloads\"\n}\n}\n}\n\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/engine-rest/message",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"engine-rest",
-						"message"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Startprozess 1.1 false",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\"messageName\": \"DesignWunscherhalten\",\n\n\"processVariables\": {\n\"decision\": {\n\"value\": false\n},\n\"receiverId\":{\n    \"value\": \"deu\"\n},\n\"name1\":{\n\"value\": \"Thanuja Puthuveetil\"\n},\n\"addressStreet\":{\n\"value\": \"Kurfürstendamm\"\n},\n\"addressHouse\":{\n\"value\": \"1\"\n},\n\"postalCode\":{\n\"value\": \"10719\"\n},\n\n\"city\":{\n\"value\": \"Berlin\"\n\n\n\n},\n\"speicherort\": {\n\"value\":\"/Users/thanu/Downloads\"\n}\n}\n}\n\n",
 					"options": {
 						"raw": {
 							"language": "json"
