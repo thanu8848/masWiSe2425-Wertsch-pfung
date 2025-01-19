@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "label": "Produkt irreparabel",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1iowyd5",
+        "columns": null
+      },
+      "id": "Field_1oz9btf",
+      "key": "produkt_defekt"
+    },
+    {
+      "label": "Submit",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_1urikoc",
+        "columns": null
+      },
+      "id": "Field_1maftp0"
+    }
+  ],
+  "type": "default",
+  "id": "ProduktIrre",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

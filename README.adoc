@@ -1,0 +1,25 @@
+= External Task Workers
+
+Dies ist ein Beispiel für die Implementierung von https://docs.camunda.org/manual/7.21/user-guide/process-engine/external-tasks/[External Task Workers] mit Camunda sowie für eine Verbindung von Camunda und UiPath.
+Das Beispiel wird im Rahmen von Vorlesungen und Übungen an der HTW Berlin verwendet.
+
+== Import in IDE
+
+Das Projekt erfordert Java 17 oder neuer.
+
+Importiere das Projekt als Maven-Projekt:
+
+* https://www.jetbrains.com/guide/java/tutorials/working-with-maven/importing-a-project/[Anleitung für IntelliJ IDEA]
+* https://www.baeldung.com/maven-import-eclipse[Anleitung für Eclipse]
+* https://code.visualstudio.com/docs/java/java-project#_import-java-projects[Anleitung für Visual Studio Code]
+
+== External Task Worker implementieren
+
+1. Erstelle eine neue Klasse, die das Interface `ExternalTaskHandler` implementiert.
+2. Erstelle in der Klasse `ExternalTaskWorkers` eine neue Topic-Subscription.
+
+Als Beispiel dient die Implementierung `PrintVariables`, welche alle Prozessvariablen ausgibt.
+
+== UiPath-Robot starten
+
+1. Erstelle in der Klasse `ExternalTaskWorkers` eine neue Topic-Subscription, die `RunUiPathRobot` verwendet.

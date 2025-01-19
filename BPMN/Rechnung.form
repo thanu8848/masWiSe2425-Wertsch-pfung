@@ -1,0 +1,83 @@
+{
+  "components": [
+    {
+      "label": "Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_15p423b",
+        "columns": null
+      },
+      "id": "Field_1w38xpq",
+      "key": "textfield_5d4rmv"
+    },
+    {
+      "label": "Adresse",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_13bahyo",
+        "columns": null
+      },
+      "id": "Field_0phcruv",
+      "key": "textfield_w1n0t6"
+    },
+    {
+      "label": "Artikel",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0ofsjao",
+        "columns": null
+      },
+      "id": "Field_1bxh75w",
+      "key": "textfield_wtq53e"
+    },
+    {
+      "label": "Menge",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1c36t0a",
+        "columns": null
+      },
+      "id": "Field_0dx03ng",
+      "key": "textfield_nvmqcg"
+    },
+    {
+      "label": "Zahlungsmittel",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0rn5i7d",
+        "columns": null
+      },
+      "id": "Field_0enm0au",
+      "key": "textfield_xaecjr"
+    },
+    {
+      "label": "Zahlungsbetrag",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0rn5i7d",
+        "columns": null
+      },
+      "id": "Field_1rs8it6",
+      "key": "textfield_16phc"
+    },
+    {
+      "label": "Submit",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_11xikz2",
+        "columns": null
+      },
+      "id": "Field_17dntvj"
+    }
+  ],
+  "type": "default",
+  "id": "bill_tag1",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

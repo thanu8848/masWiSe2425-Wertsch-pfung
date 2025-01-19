@@ -1,0 +1,122 @@
+{
+  "components": [
+    {
+      "label": "Überprüfung des Druckes",
+      "values": [
+        {
+          "label": "Ja",
+          "value": "Ja"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0do9r3f",
+        "columns": null
+      },
+      "id": "Field_1bvkadk",
+      "key": "druckpruefen"
+    },
+    {
+      "label": "Einstellen des richtigen Anpressdrucks",
+      "values": [
+        {
+          "label": "Ja",
+          "value": "Ja"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0bvk9mo",
+        "columns": null
+      },
+      "id": "Field_1v9qlhd",
+      "key": "correct_pressure",
+      "validate": {
+        "required": false
+      }
+    },
+    {
+      "label": "Einstellen des Farblaser",
+      "values": [
+        {
+          "label": "Ja ",
+          "value": "Ja"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0q5bazi",
+        "columns": null
+      },
+      "id": "Field_127gs3l",
+      "key": "select_9e6sz"
+    },
+    {
+      "label": "Farbpatrone gecheckt",
+      "values": [
+        {
+          "label": "Ja",
+          "value": "Ja"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_1r8dnm7",
+        "columns": null
+      },
+      "id": "Field_08f9n6h",
+      "key": "select_j7tay"
+    },
+    {
+      "label": "Test des neues Druckes mit einem Probestück",
+      "values": [
+        {
+          "label": "Ja",
+          "value": "Ja"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0jfujyk",
+        "columns": null
+      },
+      "id": "Field_0lbvbsq",
+      "key": "test_press"
+    },
+    {
+      "label": "Überprüfen der Druckqualität",
+      "values": [
+        {
+          "label": "Ja",
+          "value": "Ja"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0onpkjc",
+        "columns": null
+      },
+      "id": "Field_12qbm3m",
+      "key": "check_quali"
+    },
+    {
+      "label": "Submit",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_1h4l636",
+        "columns": null
+      },
+      "id": "Field_1c5jkis"
+    }
+  ],
+  "type": "default",
+  "id": "Nachbearbeitung",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

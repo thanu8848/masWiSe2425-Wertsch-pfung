@@ -1,0 +1,148 @@
+{
+  "components": [
+    {
+      "label": "Mitarbeiteranzahl",
+      "values": [
+        {
+          "label": "1",
+          "value": "1"
+        },
+        {
+          "label": "2",
+          "value": "2"
+        },
+        {
+          "label": "3",
+          "value": "3"
+        },
+        {
+          "label": "4",
+          "value": "4"
+        },
+        {
+          "label": "5",
+          "value": "5"
+        },
+        {
+          "label": "6",
+          "value": "6"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_08klj33",
+        "columns": 13
+      },
+      "id": "Field_0jvamto",
+      "key": "mitarbeiterAnzahl",
+      "searchable": false,
+      "disabled": false,
+      "readonly": false,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Maschinenanzahl",
+      "values": [
+        {
+          "label": "4",
+          "value": "4"
+        },
+        {
+          "label": "8",
+          "value": "8"
+        },
+        {
+          "label": "12",
+          "value": "12"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0zn5xjy",
+        "columns": 13
+      },
+      "id": "Field_0qpbmop",
+      "key": "maschinenAnzahl",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Maschinenart",
+      "values": [
+        {
+          "label": "Sublimationsdruckmaschine",
+          "value": "Sublimationsdruckmaschine"
+        },
+        {
+          "label": "Gravurmaschine",
+          "value": "Gravurmaschine"
+        },
+        {
+          "label": "Laserdrucker",
+          "value": "Laserdrucker"
+        },
+        {
+          "label": "Fräser",
+          "value": "Fräser"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_072nrx7",
+        "columns": 13
+      },
+      "id": "Field_1g9rxer",
+      "key": "maschinenArt"
+    },
+    {
+      "label": "Materialart",
+      "values": [
+        {
+          "label": "Baumwolle",
+          "value": "Baumwolle"
+        },
+        {
+          "label": "Leine",
+          "value": "Leine"
+        },
+        {
+          "label": "Kunststoff",
+          "value": "Kunststoff"
+        },
+        {
+          "label": "Edelstahl",
+          "value": "Edelstahl"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_16m8b5u",
+        "columns": 13
+      },
+      "id": "Field_01ntk9g",
+      "key": "materialArt"
+    },
+    {
+      "label": "Submit",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_0jva8pe",
+        "columns": null
+      },
+      "id": "Field_07lh27e"
+    }
+  ],
+  "type": "default",
+  "id": "RessourcePriorisieren",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

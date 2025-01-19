@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "label": "Adresse existiert ",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0q1x0s1",
+        "columns": null
+      },
+      "id": "Field_1n1k6d6",
+      "key": "adress_id"
+    },
+    {
+      "label": "Submit",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_08eenud",
+        "columns": null
+      },
+      "id": "Field_0j8b505"
+    }
+  ],
+  "type": "default",
+  "id": "Adresse_Exist",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.29.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

@@ -1,0 +1,34 @@
+{
+  "components": [
+    {
+      "label": "Gibt es Qualitätsmängel?",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1x6px4v",
+        "columns": null
+      },
+      "id": "Field_0yl829i",
+      "key": "quali_defects",
+      "defaultValue": false
+    },
+    {
+      "label": "Submit",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_0d0uj73",
+        "columns": null
+      },
+      "id": "Field_0xucrod"
+    }
+  ],
+  "type": "default",
+  "id": "EintragvonMaengel",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.29.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

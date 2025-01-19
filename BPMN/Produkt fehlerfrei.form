@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "label": "Produkt fehlerfrei",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1k63b09",
+        "columns": null
+      },
+      "id": "Field_0ghebcy",
+      "key": "produktfehlerfrei"
+    },
+    {
+      "label": "Submit",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_1g6hh7k",
+        "columns": null
+      },
+      "id": "Field_1c67fhd"
+    }
+  ],
+  "type": "default",
+  "id": "ProduktFrei",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.29.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

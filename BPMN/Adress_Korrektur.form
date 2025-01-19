@@ -1,0 +1,97 @@
+{
+  "components": [
+    {
+      "label": "Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0wpfpox",
+        "columns": null
+      },
+      "id": "Field_01cvldn",
+      "key": "name1"
+    },
+    {
+      "label": "Straße",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0fsab5f",
+        "columns": null
+      },
+      "id": "Field_1n5dqhp",
+      "key": "addressStreet"
+    },
+    {
+      "label": "Hausnummer",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_10jutnt",
+        "columns": null
+      },
+      "id": "Field_197s2fb",
+      "key": "addressHouse"
+    },
+    {
+      "label": "PLZ",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_105681i",
+        "columns": null
+      },
+      "id": "Field_1az5g5t",
+      "key": "postalCode"
+    },
+    {
+      "label": "Stadt",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_04qwduk",
+        "columns": null
+      },
+      "id": "Field_077lp6o",
+      "key": "city"
+    },
+    {
+      "label": "Land",
+      "values": [
+        {
+          "label": "Deutschland",
+          "value": "deu"
+        },
+        {
+          "label": "Schweiz",
+          "value": "che"
+        },
+        {
+          "label": "Östereich",
+          "value": "aut"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_07qnt55",
+        "columns": null
+      },
+      "id": "Field_0f1o3j9",
+      "key": "select_pd1l6"
+    },
+    {
+      "label": "Submit",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_0r1l1o9",
+        "columns": null
+      },
+      "id": "Field_0tqyjfw"
+    }
+  ],
+  "type": "default",
+  "id": "Adress_Korrektur",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

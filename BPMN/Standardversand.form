@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "label": "Standardversand",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0ynhjq9",
+        "columns": null
+      },
+      "id": "Field_0ybnwo8",
+      "key": "checkbox_ja"
+    },
+    {
+      "label": "Button",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_0d74foc",
+        "columns": null
+      },
+      "id": "Field_0tov6r9"
+    }
+  ],
+  "type": "default",
+  "id": "PaketSend",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.29.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}
